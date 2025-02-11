@@ -1,0 +1,30 @@
+<div class="album py-5 bg-body-tertiary">
+    <div class="container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (post of posts; track post.id) {
+                    <tr>
+                        <th scope="row">{{post.id}}</th>
+                        <td>{{post.title}}</td>
+                        <td>
+                            <button type="button" 
+                                    class="btn btn-lg btn-danger"
+                                    data-bs-toggle="popover"
+                                    data-bs-title="Post Body"
+                                    [attr.data-bs-content]="post.body">
+                                <div class="zoom-in-icon"></div>
+                            </button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,11 +1,17 @@
 import { Component } from '@angular/core';
-import { ContactoComponent, MainExampleComponent, CardsComponent, FooterComponent } from './shared/index.component';
-import { RouterOutlet } from '@angular/router';
+import { ContactoComponent,
+         MainExampleComponent,
+         FooterComponent } from './shared/index.component';
+import { RouterModule, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, ContactoComponent, MainExampleComponent, CardsComponent, FooterComponent],
+  imports: [RouterOutlet,
+            RouterModule,
+            ContactoComponent,
+            MainExampleComponent,
+            FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
